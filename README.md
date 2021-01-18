@@ -7,3 +7,7 @@ Some implementation of common data structures and algorithms in different langua
 ### Searching
 
 - Binary search
+
+### Sorting
+
+- Quicksort
