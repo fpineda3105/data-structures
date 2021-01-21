@@ -9,3 +9,6 @@ It takes a element as a pivot and separate the minor and the major elements. Rec
 ## Merge sort
 
 It uses divides and conquer approach to divide the entire list of elements into n *sub-lists* each one containing one element. Later merging each list sorting it's elements until just one list sorted result.
+
+## Selection sort
+It starts from first position and find the min value in the array, if it found a min value it swap the values from their indexes and repeadtly go to the next position to find the min value in the rest of the array.
