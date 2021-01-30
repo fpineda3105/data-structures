@@ -32,15 +32,19 @@ def print_table(table):
             print("{:>4}".format(col), end='')
         print("", end='\n')
 
+import os
 working_dir = os.getcwd()
 
-firstFile = os.path.join(working_dir,"csv","hightemp.csv")
+def get_relative_path(folder,csvfilename):
+    return os.path.join(working_dir,folder,csvfilename)
+
+firstFile = get_relative_path("csv","hightemp.csv")
 table = parse(firstFile)
 print_table(table)
 
 print("")
 print("")
 
-secondFile = os.path.join(working_dir,"csv","hightemp2.csv")
+secondFile = get_relative_path("csv","hightemp2.csv")
 table2 = parse(secondFile)
 print_table(table2)

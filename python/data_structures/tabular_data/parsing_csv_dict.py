@@ -3,6 +3,7 @@ Using csv.DictReader.
 """
 
 import csv
+from csv_util import get_relative_path
 
 MONTHS = ('Jan', 'Feb', 'Mar', 'Apr',
           'May', 'Jun', 'Jul', 'Aug',
@@ -40,10 +41,9 @@ def print_table(table):
             print("{:>6}".format(row[month]), end='')
         print("", end='\n')
 
-import os
-working_dir = os.getcwd()
 
-firstFile = os.path.join(working_dir,"csv","hightemp.csv")
+
+firstFile = get_relative_path("csv","hightemp.csv")
 table = parse_to_dict(firstFile, 'City')
 print_table(table)
 

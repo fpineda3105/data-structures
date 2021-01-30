@@ -3,6 +3,7 @@ CSV reader options.
 """
 
 import csv
+from csv_util import get_relative_path
 
 def parse_to_dict(csvfilename, keyfield, separator, quote, quotestrategy):
     """
@@ -39,12 +40,6 @@ def print_table(table, fieldnames):
             print("{:>6}".format(row[field]), end='')
         print("", end='\n')
 
-
-def get_relative_path(folder,csvfilename):
-    import os
-    working_dir = os.getcwd()
-
-    return os.path.join(working_dir,folder,csvfilename)
 
 firstFile = get_relative_path("csv","hightemp.csv")
 table, fieldnames = parse_to_dict(firstFile, 'City', ',', '"', csv.QUOTE_MINIMAL)
