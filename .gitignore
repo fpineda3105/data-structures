@@ -2,7 +2,5 @@
 
 python/.pytest_cache
 python/.vscode
-python/algorithms/searching/__pycache__
-python/algorithms/sorting/__pycache__
 
-
+python/**/__pycache__
